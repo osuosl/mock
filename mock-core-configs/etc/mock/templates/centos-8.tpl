@@ -25,7 +25,8 @@ module_platform_id=platform:el8
 
 [BaseOS]
 name=CentOS-$releasever - Base
-mirrorlist=http://mirrorlist.centos.org/?release=8&arch=$basearch&repo=BaseOS&infra=$infra
+#mirrorlist=http://mirrorlist.centos.org/?release=8&arch=$basearch&repo=BaseOS&infra=$infra
+baseurl=http://centos.osuosl.org/$releasever/BaseOS/$basearch/os/
 failovermethod=priority
 gpgkey=file:///usr/share/distribution-gpg-keys/centos/RPM-GPG-KEY-CentOS-Official
 gpgcheck=1
@@ -33,15 +34,15 @@ skip_if_unavailable=False
 
 [AppStream]
 name=CentOS-$releasever - AppStream
-mirrorlist=http://mirrorlist.centos.org/?release=8&arch=$basearch&repo=AppStream&infra=$infra
-#baseurl=http://mirror.centos.org/centos/$releasever/AppStream/$basearch/os/
+#mirrorlist=http://mirrorlist.centos.org/?release=8&arch=$basearch&repo=AppStream&infra=$infra
+baseurl=http://centos.osuosl.org/$releasever/AppStream/$basearch/os/
 gpgcheck=1
 gpgkey=file:///usr/share/distribution-gpg-keys/centos/RPM-GPG-KEY-CentOS-Official
 
 [PowerTools]
 name=CentOS-$releasever - PowerTools
-mirrorlist=http://mirrorlist.centos.org/?release=8&arch=$basearch&repo=PowerTools&infra=$infra
-#baseurl=http://mirror.centos.org/centos/$releasever/PowerTools/$basearch/os/
+#mirrorlist=http://mirrorlist.centos.org/?release=8&arch=$basearch&repo=PowerTools&infra=$infra
+baseurl=http://centos.osuosl.org/$releasever/PowerTools/$basearch/os/
 gpgcheck=1
 gpgkey=file:///usr/share/distribution-gpg-keys/centos/RPM-GPG-KEY-CentOS-Official
 
@@ -69,8 +70,8 @@ gpgkey=file:///usr/share/distribution-gpg-keys/centos/RPM-GPG-KEY-CentOS-Officia
 
 [extras]
 name=CentOS-$releasever - Extras
-mirrorlist=http://mirrorlist.centos.org/?release=8&arch=$basearch&repo=extras&infra=$infra
-#baseurl=http://mirror.centos.org/centos/$releasever/extras/$basearch/os/
+#mirrorlist=http://mirrorlist.centos.org/?release=8&arch=$basearch&repo=extras&infra=$infra
+baseurl=http://centos.osuosl.org/$releasever/extras/$basearch/os/
 gpgcheck=1
 enabled=1
 gpgkey=file:///usr/share/distribution-gpg-keys/centos/RPM-GPG-KEY-CentOS-Official

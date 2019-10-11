@@ -2,7 +2,8 @@ config_opts['yum.conf'] += """
 
 [epel]
 name=epel
-mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=epel-8&arch=$basearch
+#mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=epel-8&arch=$basearch
+baseurl=http://epel.osuosl.org/$releasever/Everything/$basearch
 failovermethod=priority
 gpgkey=file:///usr/share/distribution-gpg-keys/epel/RPM-GPG-KEY-EPEL-8
 gpgcheck=1
